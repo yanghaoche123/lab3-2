@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>ex-3-2</title>
+    <meta charset="utf-8">
+    <style>
+        div 
+        {
+            text-align: center;
+        }
+
+        img.pokemon 
+        {
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="display-1"></div>
+    <hr>
+    <div id="display-2"></div>
+    <hr>
+    <div id="display-3"></div>
+    <hr>
+
+    <script>
+        let pokemon1 = "pikachu.png";
+        let pokemon2 = "bulbasaur.png";
+        let pokemon3 = "charmander.png";
+        let pokemon4 = "squirtle.png";
+        let fragment1="";
+        let fragment2="";
+        let fragment3="";
+        let e="";
+        let a= "<img class='pokemon' src ='" + pokemon1 + "' />"
+        let b= "<img class='pokemon' src ='" + pokemon2 + "' />"
+        let c= "<img class='pokemon' src ='" + pokemon3 + "' />"
+        let d= "<img class='pokemon' src ='" + pokemon4 + "' />"
+        for(i=0;i<4;i++)
+        {
+            fragment1=fragment1+a;
+        }
+        console.log(fragment1);
+        document.getElementById("display-1").innerHTML=fragment1;
+        for(i=0;i<4;i++)
+        {
+            fragment2=fragment2+a;
+            
+        }
+        fragment2=fragment2+"<br>"
+        for(i=0;i<4;i++)
+        {
+            fragment2=fragment2+b;
+            
+        }
+        fragment2=fragment2+"<br>"
+        for(i=0;i<4;i++)
+        {
+            fragment2=fragment2+c;
+            
+        }
+        fragment2=fragment2+"<br>"
+         for(i=0;i<4;i++)
+        {
+            fragment2=fragment2+d;
+        }
+        console.log(fragment2);
+        document.getElementById("display-2").innerHTML=fragment2;
+        for(i=0;i<16;i++)
+        {
+            let x=Math.random() * 4;
+            x=Math.floor(x);
+
+            if(i%4==0)
+            {
+                fragment3=fragment3+"<br>";
+                if(x==1)
+                {
+                    fragment3=fragment3+a;
+                }
+                else if(x==2)
+                {
+                    fragment3=fragment3+b;
+                }
+                else if(x==3)
+                {
+                    fragment3=fragment3+c;
+                }
+                else
+                {
+                    fragment3=fragment3+d;
+                }
+            }
+            else
+            {
+                if(x==1)
+                {
+                    fragment3=fragment3+a;
+                }
+                else if(x==2)
+                {
+                    fragment3=fragment3+b;
+                }
+                else if(x==3)
+                {
+                    fragment3=fragment3+c;
+                }
+                else
+                {
+                    fragment3=fragment3+d;
+                }
+            }
+        }
+        console.log(fragment3);
+        document.getElementById("display-3").innerHTML=fragment3;
+
+    </script>
+</body>
+
+</html>
